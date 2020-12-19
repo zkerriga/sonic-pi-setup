@@ -5,9 +5,12 @@ function log {
 	echo $1
 }
 
-server_output_file=server-output.log
-server_errors_file=server-errors.log
-sonic_output_file=sonic-pi-output.log
+log_dir=$HOME/.sonic-pi/log/
+mkdir -p $log_dir
+server_output_file=$log_dir/script-server-output.log
+server_errors_file=$log_dir/script-server-errors.log
+sonic_output_file=$log_dir/script-sonic-pi-output.log
+sonic_errors_file=$log_dir/script-sonic-pi-errors.log
 
 # Start jack server for sonic-pi:
 
@@ -20,7 +23,7 @@ sleep 1
 
 # Start Sonic Pi process:
 
-sonic-pi 1>$sonic_output_file 2>$sonic_output_file &
+sonic-pi 1>$sonic_output_file 2>$sonic_errors_file &
 sonic_pi_pid=$!
 log "The Sonic Pi was started with the pid=$sonic_pi_pid."
 
