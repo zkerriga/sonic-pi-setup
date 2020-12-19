@@ -8,7 +8,8 @@ This program is installed by the following command:
 sudo pacman -S sonic-pi
 ```
 
-But, unfortunately, doesn't run out of the box in the ArchLinux system.
+But, unfortunately, doesn't run out of the box in the [ArchLinux](https://archlinux.org/) system.
+
 
 ### Local solution:
 I describe my steps that allowed me to run the program on my machine:
@@ -21,5 +22,5 @@ sudo gpasswd -a <user> realtime
 sudo pacman -S realtime-privileges libffado celt qjackctl
 ```
 
-The script specifies the launch of the sound server for the program and the program itself.
-When you have enjoyed enough of the Sonic Pi, you can simply close the program. The script to release all the resources :smirk:
+The script specifies the launch of **the sound server** for the program and **the program itself**.
+When you have enjoyed enough of the Sonic Pi, you can simply close the program. The script to release all the resources!  :smirk:
