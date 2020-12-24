@@ -20,6 +20,8 @@ log "The server was started with the pid=$server_pid."
 
 sleep 1
 
+# Set Language:
+export LANGUAGE=ru_RU.UTF-8
 
 # Start Sonic Pi process:
 
